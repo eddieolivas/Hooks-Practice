@@ -33,7 +33,7 @@ const Ingredients = () => {
 
   const removeIngredientHandler = ingredientId => {
     setIsLoading(true);
-    fetch(process.env.REACT_APP_DB_URL + `/ingredients/${ingredientId}.jon`, {
+    fetch(process.env.REACT_APP_DB_URL + `/ingredients/${ingredientId}.json`, {
       method: 'DELETE'
     }).then(response => {
       setIsLoading(false);
