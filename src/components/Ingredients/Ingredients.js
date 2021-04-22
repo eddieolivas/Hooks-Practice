@@ -27,7 +27,11 @@ const Ingredients = () => {
   }
 
   const removeIngredientHandler = ingredientId => {
-    setIngredients(prevIngredients => prevIngredients.filter(x => x.id !== ingredientId));
+    fetch(process.env.REACT_APP_DB_URL + `/ingredients/${ingredientId}.json`, {
+      method: 'DELETE'
+    }).then(response => {
+      setIngredients(prevIngredients => prevIngredients.filter(x => x.id !== ingredientId));
+    });
   }
 
   return (
