@@ -2,4 +2,4 @@
 
 Practicing React Hooks.
 
-https://eddies-hooks-practice.netlify.app/
+See it in action: https://eddies-hooks-practice.netlify.app/
